@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Modern Portfolio Website</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav style="background: rgba(20,25,55,0.85); border-bottom: 1px solid rgba(255,182,193,0.4);">
+      <div class="logo" style="color:#ffb7d5; text-shadow:0 0 6px rgba(255,183,213,0.7);">
+            MyPortfolio
+      </div>
+      <ul>
+            <li><a href="#home" class="active" style="color:#ffd6f0;">Home</a></li>
+            <li><a href="#work" style="color:#cfd6ff;">Work</a></li>
+            <li><a href="#about" style="color:#cfd6ff;">About</a></li>
+      </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" style="position:relative; overflow:hidden; background:#0b1020;">
+    
+    <!-- Dark overlay -->
+    <div style="position:absolute; inset:0; background:rgba(10,12,30,0.6); z-index:-1;"></div>
+
+    <div class="home-container fade-in"
+        style="display:flex; align-items:center; justify-content:space-between; gap:400px; flex-wrap:wrap; position:relative; z-index:1;">
+        
+        <div class="left" style="flex:1; max-width:720px; text-align:left;">
+            <h1 style="color:#ffd6f0; text-shadow:0 0 10px rgba(255,214,240,0.8);">
+                Hello, I'm <span style="color:#9fa8ff;">Bryan Lumangaya</span>
+            </h1>
+            <p style="color:#d6dbff; opacity:0.9;">
+                A beginner developer who loves building backend systems, IoT projects, and clean user experiences.
+            </p>
+
+            <a class="btn" href="#work"
+               style="background:linear-gradient(135deg,#ff9acb,#9fa8ff); color:#0b1020; box-shadow:0 0 20px rgba(159,168,255,0.6);">
+                See My Work
+            </a>
+            
+            <!-- Contact -->
+            <div class="contact-me">
+                <div class="soc-med">
+                    <a href="#" style="color:#ffd6f0;"><i class="fab fa-github"></i></a>
+                    <a href="#" style="color:#9fa8ff;"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" style="color:#ffb7d5;"><i class="fab fa-twitter"></i></a>
+                    <a href="#" style="color:#ffd6f0;"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="right" style="flex:1; min-width:260px; display:flex; justify-content:center;">
+            <img src="/assets/image.jpg" class="owner-img"
+                 style="box-shadow:0 0 40px rgba(159,168,255,0.7);">
+        </div>
+    </div>
+</section>
+
+<!-- WORK -->
+<section id="work" style="background:linear-gradient(180deg,#141a33,#0b1020);">
+    <h1 class="work-title" style="color:#ffd6f0;">My Work</h1>
+
+    <div class="work-grid">
+        <div class="card" style="border-color:#9fa8ff;">
+            <h3 style="color:#ffb7d5;">IoT Moving Trashcan</h3>
+            <p style="color:#cfd6ff;">A trash bin that moves to catch misthrown trash.</p>
+        </div>
+
+        <div class="card" style="border-color:#9fa8ff;">
+            <h3 style="color:#ffb7d5;">Boarding House System</h3>
+            <p style="color:#cfd6ff;">Tenant, payments, and room management.</p>
+        </div>
+
+        <div class="card" style="border-color:#9fa8ff;">
+            <h3 style="color:#ffb7d5;">FinOps Dashboard</h3>
+            <p style="color:#cfd6ff;">Revenue analytics dashboard.</p>
+        </div>
+
+        <div class="card" style="border-color:#9fa8ff;">
+            <h3 style="color:#ffb7d5;">CLI Tools</h3>
+            <p style="color:#cfd6ff;">Developer automation utilities.</p>
+        </div>
+    </div>
+
+    <div style="margin-top:40px;">
+        <button id="openGameBtn"
+            style="background:linear-gradient(135deg,#ff9acb,#9fa8ff); color:#0b1020;">
+            Play Color Game
+        </button>
+    </div>
+
+    <div class="wrap">
+        <div class="card-calc color-game" role="application" style="background:#E8F5E9;">
+          <span class="close-game" style="color:#fdaff7;">&times;</span>
+          <div class="meta">
+            <div class="title" style="color:#780b86;">Color Guessing Game</div>
+          </div>
+  
+          <div class="color-display" id="colorDisplay" style="color:#dd37c1;">RGB(?, ?, ?)</div>
+          <div class="color-buttons" id="colorButtons"></div>
+          <p id="gameMessage" style="color:#e2c9e783;"></p>
+          <button class="btn" id="newGameBtn" style="background:#c5129e; color:#fff;">New Game</button>
+        </div>
+      </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-section"
+    style="background:linear-gradient(180deg,#0a0f2a,#1a1f4d); padding:80px 20px;">
+    
+    <div class="about-container fade-in">
+        <h1 class="about-title"
+            style="
+                font-size:2.8rem;
+                background:linear-gradient(135deg,#ffd6f0,#cfd6ff);
+                -webkit-background-clip:text;
+                -webkit-text-fill-color:transparent;
+                text-shadow:0 0 18px rgba(255,214,240,0.6); text-align: center;
+            ">
+            About Me
+        </h1>
+
+        <div class="about-content">
+            <div class="about-right">
+
+                <!-- ABOUT CARD -->
+                <div class="about-card"
+                    style="
+                        background:rgba(255,255,255,0.08);
+                        color:#eef1ff;
+                        backdrop-filter:blur(14px);
+                        border-radius:26px;
+                        box-shadow:
+                            0 20px 60px rgba(159,168,255,0.25),
+                            inset 0 0 30px rgba(255,255,255,0.05);
+                    ">
+                    <p>
+                        I am a beginner developer focusing on backend development, databases, IoT hardware, and building smooth
+                        user interfaces. I love creating functional systems, learning new technologies, and turning ideas into
+                        real-world projects.
+                    </p>
+                </div>
+
+                <!-- SKILLS -->
+                <div class="skills-horizontal">
+                    <div class="skill"
+                        style="
+                            background:rgba(159,168,255,0.18);
+                            color:#ffe3f5;
+                            box-shadow:0 0 18px rgba(255,214,240,0.4);
+                        ">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+
+                    <div class="skill" style="background:rgba(159,168,255,0.18); color:#ffe3f5;">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+
+                    <div class="skill" style="background:rgba(159,168,255,0.18); color:#ffe3f5;">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="skill" style="background:rgba(159,168,255,0.18); color:#ffe3f5;">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+
+                    <div class="skill" style="background:rgba(159,168,255,0.18); color:#ffe3f5;">
+                        <i class="fas fa-database"></i>
+                        <span>MySQL</span>
+                    </div>
+
+                    <div class="skill" style="background:rgba(159,168,255,0.18); color:#ffe3f5;">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git & GitHub</span>
+                    </div>
+
+                    <div class="skill" style="background:rgba(159,168,255,0.18); color:#ffe3f5;">
+                        <i class="fas fa-wind"></i>
+                        <span>Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <!-- TIMELINE -->
+                <div class="about-timeline">
+                    <div class="timeline-item">
+                        <h4 style="color:#ffb7d5; text-shadow:0 0 10px rgba(255,183,213,0.6);">
+                            2025 - Present
+                        </h4>
+                        <p style="color:#d6dcff;">
+                            Learning backend development and creating personal projects using Spring Boot, FastAPI, and MariaDB.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4 style="color:#ffb7d5; text-shadow:0 0 10px rgba(255,183,213,0.6);">
+                            2023 - 2024
+                        </h4>
+                        <p style="color:#d6dcff;">
+                            Explored IoT hardware projects, building automated systems and smart devices.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="module" src="/bg-anime/script.js"></script>
+
+</body>
+</html>
